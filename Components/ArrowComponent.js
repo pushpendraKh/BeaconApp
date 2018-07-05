@@ -8,11 +8,11 @@ export default class ArrowComponent extends Component {
         console.log("Arrow Component")
         return(
             <View style = { styles.container}>
-                <Arrow arrowType = "LEFT" />
-                <Text style = { styles.textStyle }>
-                    10000
+                <Arrow arrowType = "RIGHT" style = {styles.arrowStyle } />
+                <Text style = { styles.textStyle}>
+                    { this.props.text }
                 </Text>
-                <Arrow arrowType = "RIGHT"/>
+                <Arrow arrowType = "LEFT" style = {styles.arrowStyle }/>
             </View>
         )
     }
@@ -21,18 +21,21 @@ export default class ArrowComponent extends Component {
 
 const styles = StyleSheet.create( {
     container: {
-        flex: 1,
-        //alignItems: 'stretch',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'flex-start'
     },
 
     textStyle: {
-        fontSize: 20,
+        fontSize: 16,
         textAlign: 'center',
         color: '#333333',
+        marginLeft: 5,
+        marginRight: 5,
     },
- 
+
+    arrowStyle: {
+        flex: 1,
+    },
     
 })

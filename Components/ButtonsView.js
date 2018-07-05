@@ -6,7 +6,7 @@ export default class ButtonsView extends Component {
 
     render() {
         return(
-            <View style = {styles.buttonContainer}>
+            <View style = {[this.props.style, styles.buttonContainer]}>
             <BannerButton title = "Google" 
                           onClick = { () => this.props.navigation.navigate('Web', {
                             url: 'https://google.co.in'
