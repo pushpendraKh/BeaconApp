@@ -14,7 +14,6 @@ export default class Triangle extends Component {
             default: 
                 return( <View style = {[styles.arrowProperty,styles.bottomArrowProperty]} /> )
         }
-        
     }
 }
 
