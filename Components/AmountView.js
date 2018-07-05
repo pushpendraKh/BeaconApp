@@ -15,17 +15,16 @@ class ViewWithText extends Component {
     }
 }
 
+let firstFlexValue = 50000
+let secondFlexValue = 40000
+
 export default class AmountView extends Component {
 
     render() {
-        let firstBox = 500
-        let second = 50000
-        let firstPercent = firstBox/(firstBox + second)
-        console.log('first', firstPercent)
         return(
             <View style = { styles.container}>
-                <ViewWithText amount = '500000' style = { [styles.box ,styles.first, flex = this.firstPercent] } />
-                <ViewWithText amount = '500000' style = { [styles.box, styles.second]} />
+                <ViewWithText amount = {firstFlexValue} style = { [styles.first, ] } />
+                <ViewWithText amount = { secondFlexValue } style = { [styles.second,]} />
             </View>
         )
     }
@@ -45,17 +44,15 @@ const styles = StyleSheet.create({
         borderRadius: 2,
     },
 
-    box: {
-        flex: 1,
-        justifyContent: 'center',
-    },
 
     first: {
+        flex: firstFlexValue,
         backgroundColor: 'yellow',
 
     },
 
     second: {
+        flex: secondFlexValue,
         backgroundColor: 'purple',
     },
 
