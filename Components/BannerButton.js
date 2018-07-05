@@ -4,28 +4,21 @@ import {
   Button,
   View,
 } from 'react-native';
+import CustomButton from './CustomButton';
 
 export default class BannerButton extends Component {
-    render() {
+    render() {    
         return(
-            <View style = { styles.container}>
-                <Button
-                    onPress= { this.props.onClick }
-                    title = { this.props.title }
-                    color="#000"
-                />
-            </View>    
+            <CustomButton style = { styles.container}
+                    onPressButton= { this.props.onClick }
+                    buttonText = { this.props.title }
+            />   
         )
     }
 }
 
 const styles = StyleSheet.create({
     container: {
-      height: 40,
-      borderColor: '#568EA3',
-      borderWidth: 'solid',
-      borderWidth: 1,
-      borderRadius: 10,
       margin: 5,
     },
   })
